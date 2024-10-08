@@ -22,7 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # Include allauth URLs for authentication
-    path('products/', include('products.urls')),
+    path('products/', include('products.urls', namespace='products')),
     path('services/', include('services.urls')),
     path('orders/', include('orders.urls')),
     path('carts/', include('carts.urls')),
