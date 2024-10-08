@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clean Services Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Main Navigation -->
+    {% include 'includes/main-nav.html' %}
+
+    <!-- Page Header Section -->
+    <header>
+        {% block page_header %}
+        <div class="hero" style="background-image: url('{% get_media_prefix %}homepage_background.webp');">
+            <div class="container text-center">
+                <h1>Welcome to Clean Services Platform</h1>
+                <p>Your one-stop solution for cleaning products and services</p>
+            </div>
+        </div>
+        {% endblock %}
+    </header>
+    
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container text-center py-4">
+            <p>&copy; 2024 Clean Services Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block extra_body %}{% endblock %}
+</body>
+</html>
