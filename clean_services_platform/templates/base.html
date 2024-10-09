@@ -102,8 +102,14 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
+                <!-- Mobile header: visible on small screens only -->
+                <div class="d-lg-none">
+                    {% include 'includes/mobile-top-header.html' %}
+                </div>
+                <!-- Main nav: hidden on small screens, visible on larger screens -->
+                <div class="d-none d-lg-block">
+                    {% include 'includes/main-nav.html' %}
+                </div>
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
@@ -123,24 +129,24 @@
         </div>
     {% endif %}
 
-  <!-- Main Content Section -->
-  <main class="content">
-      <div class="container">
-          {% block content %}{% endblock %}
-      </div>
-  </main>
+    <!-- Main Content Section -->
+    <main class="content" style="margin-top: 150px;">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
 
-  <!-- Footer Section -->
-  <footer>
-      <div class="container text-center py-4">
-          <p>&copy; 2024 Clean Services Platform. All rights reserved.</p>
-      </div>
-  </footer>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container text-center py-4">
+            <p>&copy; 2024 Clean Services Platform. All rights reserved.</p>
+        </div>
+    </footer>
 
-  {% block postloadjs %}
-  <script type="text/javascript">
-      $('.toast').toast('show');
-  </script>
-  {% endblock %}
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
 </body>
 </html>
