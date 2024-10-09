@@ -51,6 +51,23 @@ body {
     color: #007bff;
 }
 
+/* Hamburger button fix */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Fixed header styling */
+.fixed-top {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
 /* Button Styles */
 .btn {
     background-color: #007bff;
@@ -144,4 +161,54 @@ footer {
 .custom-clearable-file-input a:hover {
     color: #007bff;
     text-decoration: underline;
+}
+
+/* Toast message container */
+.message-container {
+    position: fixed;
+    top: 80px; /* Adjusted to ensure it's visible under the header */
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Toast styling */
+.toast {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Toast success */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Toast error */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Toast warning */
+.toast-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .content {
+        padding-top: 100px; /* Adjust padding for smaller screens */
+    }
 }
