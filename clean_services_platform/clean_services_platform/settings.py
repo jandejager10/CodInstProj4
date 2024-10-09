@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'users',
     'rest_framework',
     'crispy_forms',
+    'crispy_bootstrap5',
     'storages',
     'django_countries',
     'django.contrib.humanize',
@@ -82,6 +83,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'clean_services_platform.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 TEMPLATES = [
     {

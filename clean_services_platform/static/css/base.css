@@ -93,3 +93,55 @@ footer {
     border-color: #007bff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Style for the custom clearable file input */
+.custom-clearable-file-input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 0.25rem;
+    background-color: #f9f9f9;
+}
+
+/* Styling the current file link */
+.custom-clearable-file-input p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Styling the remove checkbox label */
+.custom-clearable-file-input label {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* File input field styling */
+.custom-clearable-file-input input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Hover effect for the file input */
+.custom-clearable-file-input input[type="file"]:hover {
+    border-color: #333;
+}
+
+/* Additional styles for the checkbox */
+.custom-clearable-file-input input[type="checkbox"] {
+    margin-right: 0.3rem;
+}
+
+/* Style for file link hover */
+.custom-clearable-file-input a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
