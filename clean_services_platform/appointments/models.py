@@ -3,6 +3,7 @@ from datetime import datetime
 
 from services.models import Service  # Import the Service model
 
+
 # Create your models here.
 class Appointment(models.Model):
     user = models.ForeignKey(to='auth.User', on_delete=models.CASCADE)  # Link appointment to user
@@ -16,3 +17,4 @@ class Appointment(models.Model):
 
     def is_past_due(self):
         now = datetime
+        return datetime.combine(self.date, self.time) < now
