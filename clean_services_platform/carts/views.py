@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from products.models import Product
+from .cart import Cart  # Import the Cart class
 
 
 # Create your views here.
